@@ -28,6 +28,7 @@
 </template>
 
 <script>
+    const STORAGE_KEY = 'todo-storage';
     export default {
         name: "Main",
         data () {

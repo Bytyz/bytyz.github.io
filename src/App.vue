@@ -158,4 +158,72 @@ $logo-size: 450px;
             height: 150px;
         }
     }
+    .checkbox {
+        vertical-align: top;
+        margin: 0 3px 0 0;
+        width: 17px;
+        height: 17px
+    }
+
+    .checkbox+label {
+        cursor: pointer;
+        font-size: 14px;
+        color: #aaa;
+        font-weight: 400;
+        line-height: 15px
+    }
+
+    .checkbox:not(checked) {
+        position: absolute;
+        opacity: 0
+    }
+
+    .checkbox:not(checked)+label {
+        position: relative;
+        padding: 0 0 0 60px
+    }
+
+    .checkbox:not(checked)+label:before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: 0;
+        width: 50px;
+        height: 26px;
+        -webkit-border-radius: 13px;
+        border-radius: 13px;
+        background: #cdd1da;
+        -webkit-box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+        box-shadow: inset 0 2px 3px rgba(0,0,0,.2)
+    }
+
+    .checkbox:not(checked)+label:after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 2px;
+        width: 22px;
+        height: 22px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.3);
+        box-shadow: 0 2px 5px rgba(0,0,0,.3);
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s
+    }
+
+    .checkbox:checked+label:before {
+        background: #9fd468
+    }
+
+    .checkbox:checked+label:after {
+        left: 26px
+    }
+
+    .checkbox:focus+label:before {
+        -webkit-box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+        box-shadow: 0 0 0 3px rgba(255,255,0,.5)
+    }
 </style>
