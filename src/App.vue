@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="container-fluid">
+    <div id="app" class="container-fluid main default">
 <app-main></app-main>
 
     </div>
@@ -225,5 +225,88 @@ $logo-size: 450px;
     .checkbox:focus+label:before {
         -webkit-box-shadow: 0 0 0 3px rgba(255,255,0,.5);
         box-shadow: 0 0 0 3px rgba(255,255,0,.5)
+    }
+    .btn_save {
+        min-height: 38px;
+    }
+    .edit_row {
+        z-index: 1;
+        display: flex;
+        background-color: #fff;
+        align-items: center;
+        position: absolute;
+        left: 0;
+    }
+
+
+    .tasks.matrix_view .task__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .tasks.matrix_view .task__item {
+
+        display: grid;
+        box-sizing: border-box;
+        background: #e0ddd5;
+        color: #171e42;
+        padding: 10px;
+        border: 1px solid #000;
+        margin: 10px;
+    }
+    .tasks.matrix_view .task__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @mixin n-columns($min-width, $gutter, $last-equal: false, $max-cols: 5) {
+        .tasks.matrix_view
+            .task__body {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -$gutter;
+                margin-top: -$gutter;
+
+                .task__item {
+                    flex: 1 0 $min-width;
+                    margin-left: $gutter;
+                    margin-top: $gutter;
+
+                    @if $last-equal {
+                        @for $i from 2 through $max-cols {
+                            $screen-width: ($min-width*$i)+($gutter*$i);
+                            $column-width: (100%/$i);
+                            @media (min-width: $screen-width) {
+                                max-width: calc(#{$column-width} - #{$gutter});
+                            }
+                        }
+
+                        $column-width: (100%/$max-cols);
+                        @media (min-width: $min-width*$max-cols) {
+                            min-width: calc(#{$column-width} - #{$gutter});
+                        }
+                    }
+                }
+            }
+    }
+
+    @include n-columns(300px,  10px, true, 5);
+
+    .red{
+        background-color: red;}
+    .orange {
+        background-color: orange;}
+    .dark {
+        background-color: darkslategrey;}
+    .green {
+        background-color: green;}
+
+    .setting__variant {
+        display: flex;
+        flex-direction: row;
+    }
+    .setting__variant span:first-child {
+        width: 200px;
+        text-align: left;
     }
 </style>

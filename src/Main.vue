@@ -4,7 +4,7 @@
 
 
             <header class="top-header mt-3">
-                <a href="#"  v-on:click.prevent="config=false">
+                <a href="#"  v-on:click.prevent="config='todo'">
                     <div class="logo">
                         <div class="chrome-logo"></div>
                     </div>
@@ -14,15 +14,18 @@
             <div class="main_menu row">
 
                 <ul class="setting__list">
-                    <li class="setting__item"><a v-on:click.prevent="config=false">{{home}}</a></li>
-                    <li class="setting__item"><a v-on:click.prevent="config=true">{{settings}}</a></li>
+                    <li class="setting__item"><a v-on:click.prevent="config='todo'">{{home}}</a></li>
+                    <li class="setting__item"><a v-on:click.prevent="config='settings'">{{settings}}</a></li>
+                    <li class="setting__item"><a v-on:click.prevent="config='profile'">{{profile}}</a></li>
                 </ul>
             </div>
         </aside>
-<app-todo v-if="config==false"></app-todo>
-        <app-settings v-if="config==true"></app-settings>
+        <section class="col-12 col-lg-10">
+        <app-todo v-if="config=='todo'"></app-todo>
+        <app-settings  v-if="config=='settings'"></app-settings>
+        <app-profile  v-if="config=='profile'"></app-profile>
 
-
+        </section>
 
     </main>
 </template>
@@ -33,11 +36,13 @@
         name: "Main",
         data () {
             return {
-                config: false,
+                config: 'todo',
                 title: 'your personal ToDo list',
                 logo: 'ToDo',
                 home: 'Home',
                 settings: 'Settings',
+                profile: 'Profile',
+
             }
         },
     }
