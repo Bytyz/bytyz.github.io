@@ -9,7 +9,7 @@
         </div>
         <div class="setting__variants">
             <div class="setting__variant">
-                <button class="setting__variant btn btn-lg btn-primary ml-5 p-5" v-for="color in colors" :class="color" @click="changeColor(color)">
+                <button class="setting__variant btn btn-lg btn-primary ml-5 mt-5 p-5" v-for="color in colors" :class="color" @click="changeColor(color)">
                     {{color}}
                 </button>
             </div>
