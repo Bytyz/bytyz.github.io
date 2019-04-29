@@ -314,6 +314,7 @@ $logo-size: 450px;
     .setting__variant {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
     .setting__variant span:first-child {
         width: 200px;
