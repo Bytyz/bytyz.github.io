@@ -37,17 +37,21 @@
         height: 100vh;
     }
     .sidebar {
-        background-color: #bbb;
+        background-color: #0f1232;
+        color: #fff;
     }
     div {
         box-sizing: border-box;
     }
     .top-header {
         height: 80px;
+
     }
     .top-header a{
         display: flex;
         justify-content: center;
+        cursor: pointer;
+        color: #fff;
     }
     .main_menu {
         height: calc(100% - 80px);
@@ -60,6 +64,9 @@
         width: 50px;
         display: inline-block;
         margin-right: 20px;
+    }
+    .setting__variants {
+
     }
     // Variables
 $logo-size: 450px;
@@ -141,10 +148,14 @@ $logo-size: 450px;
         line-height: 30px;
         display: block;
         padding: 10px 20px;
+        cursor: pointer;
     }
     .setting__item a:hover {
         opacity: .5;
         background-color: blue;
+    }
+    .tasks__menu {
+        cursor: pointer;
     }
 
     @media only screen and (max-width:992px) {

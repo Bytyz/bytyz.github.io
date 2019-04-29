@@ -7,10 +7,13 @@
         <div class="setting__title">
             <h2>Цветовая схема</h2>
         </div>
-        <div class="setting__variants ">
-            <button class="setting__variant btn btn-lg btn-primary ml-5 p-5" v-for="color in colors" :class="color" @click="changeColor(color)">
-                {{color}}
-            </button>
+        <div class="setting__variants">
+            <div class="setting__variant">
+                <button class="setting__variant btn btn-lg btn-primary ml-5 p-5" v-for="color in colors" :class="color" @click="changeColor(color)">
+                    {{color}}
+                </button>
+            </div>
+
         </div>
     </div>
 </div>
@@ -35,7 +38,3 @@
     }
 
 </script>
-
-<style scoped>
-
-</style>

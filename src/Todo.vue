@@ -18,8 +18,8 @@
             <div class="tasks__table col-12">
                 <div class="tasks__menu text-right">
                     <div class="tasks__counter"></div>
-                    <div class="catalog-in-section-page-right-catalog-sort-panel-right clear" @click="matrix = !matrix">
-                        <span class="catalog-in-section-page-right-catalog-sort-panel-title">Вид:</span>
+                    <div class="" @click="matrix = !matrix">
+                        <span>Вид:</span>
                         <span id="line_grid" class="svg_toggle_button" title="Табличный вид">
                             <svg viewBox="0 0 20 20" width="20px" height="20px">
                                 <rect fill="currentColor" x="2" y="2" width="4" height="4"></rect>
@@ -171,7 +171,3 @@
 
 
 </script>
-
-<style scoped>
-
-</style>
