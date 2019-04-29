@@ -11,7 +11,9 @@
                     </div>
                 </form>
             </div>
-            <div class="section_header__profile col-6  mt-3 mb-3 justify-content-start">Профиль</div>
+            <div class="section_header__profile col-6  mt-3 mb-3">
+                <span><b>Профиль</b></span> <span>Анатолий Лачугин</span> <div class="prof_img"><img src="src/prof.jpg" alt=""></div>
+            </div>
         </div>
         <div class="tasks row" :class="{ matrix_view: matrix }" >
 

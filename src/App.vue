@@ -151,8 +151,7 @@ $logo-size: 450px;
         cursor: pointer;
     }
     .setting__item a:hover {
-        opacity: .5;
-        background-color: blue;
+        background-color: #770101;
     }
     .tasks__menu {
         cursor: pointer;
@@ -319,5 +318,20 @@ $logo-size: 450px;
     .setting__variant span:first-child {
         width: 200px;
         text-align: left;
+    }
+    .prof_img {
+        border-radius: 50%;
+        overflow: hidden;
+        float: right;
+        width: 100px;
+        height: 100px;
+    }
+    .prof_img img {
+        width: 100%;
+    }
+    .section_header__profile {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 </style>
