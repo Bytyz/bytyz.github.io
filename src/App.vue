@@ -190,7 +190,7 @@ $logo-size: 450px;
 
     .checkbox:not(checked)+label {
         position: relative;
-        padding: 0 0 0 60px
+        padding-top: 24px;
     }
 
     .checkbox:not(checked)+label:before {
@@ -325,6 +325,7 @@ $logo-size: 450px;
         float: right;
         width: 100px;
         height: 100px;
+        cursor: pointer;
     }
     .prof_img img {
         width: 100%;

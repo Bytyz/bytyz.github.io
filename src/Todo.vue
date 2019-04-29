@@ -1,7 +1,10 @@
 <template>
     <div class="content">
         <div class="section_header row">
-            <div class="section_header__search col-6  mt-3 mb-3 justify-content-end">
+            <div class="section_header__profile col-12 col-lg-6 mt-3 mb-3">
+                <span><b>Профиль</b></span> <span>Анатолий Лачугин</span> <div class="prof_img"><img src="src/prof.jpg" alt=""></div>
+            </div>
+            <div class="section_header__search col-12 col-lg-6 mt-5 mb-3 justify-content-end">
                 <form class="form" @submit.prevent="addItem">
                     <div class="input-group  ">
                         <input type="text" class="form-control col-12 col-lg-8 text-left" placeholder="Что нужно сделать" id="itemForm">
@@ -11,9 +14,7 @@
                     </div>
                 </form>
             </div>
-            <div class="section_header__profile col-6  mt-3 mb-3">
-                <span><b>Профиль</b></span> <span>Анатолий Лачугин</span> <div class="prof_img"><img src="src/prof.jpg" alt=""></div>
-            </div>
+
         </div>
         <div class="tasks row" :class="{ matrix_view: matrix }" >
 
