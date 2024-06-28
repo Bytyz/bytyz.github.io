@@ -252,7 +252,7 @@ $logo-size: 450px;
     .tasks.matrix_view .task__body {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
     .tasks.matrix_view .task__item {
 
